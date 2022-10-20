@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.nunes.contaprodutos.entities.Product;
 
 @Component
-@FeignClient(name = "lista-produtos", url = "localhost:8080", path = "/products")
+@FeignClient(name = "lista-produtos", path = "/products")
 public interface ProductFeignClient {
 
 	@GetMapping(value = "/{id}")
